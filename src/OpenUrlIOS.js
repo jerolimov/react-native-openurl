@@ -5,7 +5,7 @@
  */
 'use strict';
 
-import { NativeModules } from 'react-native';
+import { NativeModules, Promise } from 'react-native';
 
 const OpenUrlManager = NativeModules.RNOpenUrl;
 
@@ -17,7 +17,7 @@ export default class OpenUrlIOS {
    * @param url the Uri to be opened.
    * @param option the Option in iOS is ignored
    */
-  static openURL(url: string, option: TabOption = {}): Promise<boolean> {
+  static openURL(url: string): Promise<boolean> {
     return OpenUrlManager.openURL(url)
   }
 }

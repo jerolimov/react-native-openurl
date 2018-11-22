@@ -1,6 +1,9 @@
 
 import { NativeModules } from 'react-native';
+import { OpenUrlIOS } from './src';
 
 const { RNOpenUrl } = NativeModules;
 
-export default RNOpenUrl;
+
+const OpenUrl = OpenUrlIOS; 
+export { OpenUrl, RNOpenUrl };
